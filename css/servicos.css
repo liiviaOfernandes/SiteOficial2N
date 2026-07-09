@@ -1,0 +1,49 @@
+/* ==========================================
+OFÍCIO DO 2º TABELIONATO DE NOTAS
+style.css
+========================================== */
+
+/* ========= GOOGLE FONTS ========= */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ========= RESET ========= */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+pagina-servicos{
+font-family:'Poppins',sans-serif;
+background:#FAF8F4;
+color:#333;
+overflow-x:hidden;
+}
+
+menu-servicos{
+width:100%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:20px 0;
+}
+
+conteudo-servicos{
+width:100%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:20px 0;
+}
+
+detalhes-servicos{
+width:100%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:20px 0;
+}
