@@ -1,21 +1,9 @@
 
-const links = document.querySelectorAll("nav a");
-
-    links.forEach(link=>{
-        link.addEventListener("click",(e)=>{
-            e.preventDefault();
-            const id = link.getAttribute("href");
-            document.querySelector(id).scrollIntoView({
-                behavior:"smooth"
-            });
-        });
-    });
-
-    /*==============================
+/*==============================
 ROLAGEM SUAVE
 ==============================*/
 
-document.querySelectorAll('nav a').forEach(link => {
+document.querySelectorAll('nav a[href^="#"]').forEach(link => {
 
     link.addEventListener('click', function(e){
 
@@ -24,9 +12,7 @@ document.querySelectorAll('nav a').forEach(link => {
         const id = this.getAttribute('href');
 
         document.querySelector(id).scrollIntoView({
-
             behavior:'smooth'
-
         });
 
     });
@@ -61,47 +47,52 @@ BOTÃO VOLTAR AO TOPO
 
 const voltar = document.getElementById("voltarTopo");
 
-window.addEventListener("scroll",()=>{
+if(voltar){
 
-    if(window.scrollY > 400){
+    window.addEventListener("scroll",()=>{
 
-        voltar.classList.add("show");
+        if(window.scrollY > 400){
 
-    }else{
+            voltar.classList.add("show");
 
-        voltar.classList.remove("show");
+        }else{
 
-    }
+            voltar.classList.remove("show");
 
-});
-
-voltar.addEventListener("click",()=>{
-
-    window.scrollTo({
-
-        top:0,
-
-        behavior:"smooth"
+        }
 
     });
 
-});
+    voltar.addEventListener("click",()=>{
+
+        window.scrollTo({
+
+            top:0,
+
+            behavior:"smooth"
+
+        });
+
+    });
+
+}
 
 
 /*==============================
 MENU MOBILE
 ==============================*/
-
 const menu = document.querySelector(".menu-mobile");
-
 const nav = document.querySelector("nav");
 
-menu.addEventListener("click",()=>{
+if(menu && nav){
 
-    nav.classList.toggle("open");
+    menu.addEventListener("click",()=>{
 
-});
+        nav.classList.toggle("open");
 
+    });
+
+}
 
 /*==============================
 FECHAR MENU
